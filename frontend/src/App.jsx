@@ -1,19 +1,24 @@
-import Header from './components/Header/Header.jsx'
-import MessageItem from './components/MessageItem/MessageItem.jsx'
-import './App.css'
+
+import './App.css';
+import { Routes, Route } from 'react-router-dom';
+import AddMessage from './components/AddMessage/AddMessage.jsx';
+
+import MessageList from './components/MessageList/MessageList.jsx';
 
 function App() {
 
-
   return (
     <>
-      <div>
-        <MessageItem />
-        <h1>Testing from App Component</h1>
-        <Header />
+      <div className="App">
+
+        <Routes>
+          <Route exact path="/" element={<MessageList />} />
+          <Route path="/add-message" element={<AddMessage />} />
+
+        </Routes>
       </div>
     </>
-  )
+  );
 }
 
-export default App
+export default App;

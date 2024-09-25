@@ -1,0 +1,121 @@
+/* TEXTAREA STYLING */
+
+.Post-Message {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.Post-Message-form {
+    display: flex;
+    width: 100%;
+    margin-bottom: 40px;
+    background-color: white;
+}
+
+.Post-Message-form {
+    background-color: transparent;
+
+    width: 90%;
+    display: block;
+    background-color: white;
+
+    margin-top: 100px;
+}
+
+.Post-Message-textarea {
+    background-color: transparent;
+    border: 0;
+    width: 100%;
+    padding: 10px;
+    height: 55vh;
+    font-size: 20px;
+
+}
+
+
+
+/* USERNAME/INPUT STYLEING */
+
+.Post-Message-input {
+    padding: 15px 20px;
+    width: 90%;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+    margin-bottom: 20px;
+    margin-top: 20%;
+    font-size: 20px;
+}
+
+
+/* BUTTON STYLING */
+
+.Post-Message-Btn {
+    background-color: rgba(239, 67, 67, 1);
+    width: 90%;
+    padding: 15px 20px;
+    border: 0;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s;
+}
+
+.Post-Message-Btn span {
+    font-weight: 600;
+    background-color: transparent;
+    font-size: 20px;
+}
+
+.Post-Message-Btn:hover {
+    background-color: rgba(239, 67, 67, 0.539);
+    transform: scale(1.05);
+}
+
+.Post-Message-Btn:active {
+    transform: scale(0.95);
+}
+
+.Post-Message-Btn:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(239, 67, 67, 0.5);
+}
+
+.inputAndBtn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+
+/* VEKTOR KANTEN SOM PNG EFTER ALLT FUCKAT UPP PÅ FORMULÄRET*/
+
+.kant-vector {
+    display: flex;
+    justify-content: end;
+
+}
+
+/* CLOSE-BTN ICON */
+
+
+.Close-btn {
+    position: fixed;
+    top: 70px;
+    right: 30px;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.Close-icon {
+    font-size: 35px;
+    background-color: transparent;
+    color: rgb(157, 147, 147);
+}
+
+.Close-icon:hover {
+    color: rgba(239, 67, 67, 1);
+}

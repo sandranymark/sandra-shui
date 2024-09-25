@@ -1,32 +1,95 @@
-import { useState } from "react";
+import './AddMessage.css';
+import Logotype from '../Logotype/Logotype.jsx';
+import { useState, useEffect } from 'react';
+import { postMessage, getMessages } from '../../services/services.jsx';
+import { useNavigate } from 'react-router-dom';
+import vector from '../../assets/Vector.png';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCircleXmark } from '@fortawesome/free-solid-svg-icons';
 
-function MessageItem() {
-    const [message, setMessage] = useState('')
-    const [messages, setMessages] = useState([])
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        if (message) {
-            setMessages([...messages, message])
-            setMessage('');
+function AddMessage() {
+    const [messages, setMessages] = useState([]);
+    const [username, setUsername] = useState('');
+    const [text, setText] = useState('');
+    const navigate = useNavigate();  // skapar upp navigationen för att kunna navigera tillbaka till startsidan.
+
+    useEffect(() => {
+        fetchMessages();
+    }, []);
+
+    const fetchMessages = async () => {
+        try {
+            const response = await getMessages();
+            console.log('Fetched messages:', response.data.data);
+            setMessages(Array.isArray(response.data.data) ? response.data.data : []);
+        } catch (error) {
+            console.error('Error fetching messages:', error);
+            setMessages([]); // Om det inte går att hämta meddelanden, sätts messages till en tom array.
         }
-    }
-    console.log(messages)
+    };
+
+    const handlePostMessage = async (e) => {
+        e.preventDefault();
+        if (!username || !text) return;
+
+        const newMessage = {
+            username,
+            text,
+            createdAt: new Date().toISOString(),
+        };
+
+        try {
+            await postMessage(newMessage);
+            setUsername('');
+            setText('');
+            fetchMessages();  // Hämtar alla meddelanden igen så den blir uppdaterad med det senaste.
+
+            navigate('/');  //Navigerar tillbaka till startsidan (MessageList som ligger i app)
+        } catch (error) {
+            console.error('Error posting message:', error);
+        }
+    };
+
+    const handleClose = () => {
+        navigate('/');
+    };
 
     return (
         <>
-            <div>
-                <form onSubmit={handleSubmit}>
-                    <input
-                        type='text'
-                        placeholder='Enter message'
-                        value={message}
-                        onChange={(e) => setMessage(e.target.value)}
-                    />
-                    <button type='submit'>Add Message</button>
+            <Logotype />
+            <section className="Post-Message">
 
+                <div className='Close-btn' onClick={handleClose}>
+                    <FontAwesomeIcon className='Close-icon' icon={faCircleXmark} />
+                </div>
+
+                <form onSubmit={handlePostMessage} className="Post-Message-form">
+
+                    <textarea
+                        className="Post-Message-textarea"
+                        placeholder="Djurgården vinner HockeyAllsvenskan i år..."
+                        value={text}
+                        onChange={(e) => setText(e.target.value)}
+                    ></textarea>
+                    <div className='kant-vector'>
+                        <img className='vector' src={vector} alt="kant till bild" />
+                    </div>
+
+
+                    <div className='inputAndBtn'>
+                        <input className="Post-Message-input"
+                            type="text"
+                            placeholder="Användarnamn"
+                            value={username}
+                            onChange={(e) => setUsername(e.target.value)}
+                        />
+                        <button type='submit' className="Post-Message-Btn"><span>Publicera</span></button>
+                    </div>
                 </form>
-            </div>
+            </section>
         </>
     )
 }
+
+export default AddMessage;

@@ -1,0 +1,8 @@
+.logo {
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 15px;
+    background-color: transparent;
+    cursor: pointer;
+}
