@@ -1,0 +1,13 @@
+.Filter-icon {
+    font-size: 40px;
+    display: flex;
+    justify-content: end;
+    padding: 10px;
+    color: white;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.Filter-icon.active {
+    color: rgba(239, 67, 67, 1)
+}

@@ -23,11 +23,11 @@ functions:
             - httpApi:
                   path: /messages
                   method: get
-    GetMessage:
-        handler: functions/GetMessage/index.handler
+    GetUserMessages:
+        handler: functions/GetUserMessages/index.handler
         events:
             - httpApi:
-                  path: /messages/{id}
+                  path: /messages/user/{username}
                   method: get
 
     PostMessage:

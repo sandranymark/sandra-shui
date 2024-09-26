@@ -21,3 +21,7 @@ export const updateMessage = async (id, updatedMessage) => {
 export const deleteMessage = async (id) => {
     return await axios.delete(`${API_URL}/messages/${id}`);
 };
+
+export const getMessagesByUser = async (username) => {
+    return await axios.get(`${API_URL}/messages/user/${username}`);
+};

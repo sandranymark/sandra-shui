@@ -70,13 +70,23 @@
     background-color: transparent;
 }
 
-.write-icon {
+
+.write-icon-btn {
+    cursor: pointer;
+    left: auto;
+    right: 26px;
+    top: auto;
+    bottom: 20px;
+    cursor: pointer;
     position: fixed;
-    left: 293px;
-    right: 0;
-    bottom: 40px;
     background-color: transparent;
-    width: 72px;
+    border: 0;
+}
+
+.write-icon {
+    font-size: 40px;
+    background-color: transparent;
+
 }
 
 
@@ -98,4 +108,45 @@
 
 .icon-party {
     background-color: transparent;
+}
+
+.search-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main {
+    position: relative;
+}
+
+.error-message {
+    color: rgba(239, 67, 67, 1);
+    font-size: 16px;
+    background-color: transparent;
+    margin-left: 20px;
+
+}
+
+
+.back-button {
+    margin: 20px 0;
+    padding: 10px 20px;
+    background-color: rgba(239, 67, 67, 1);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.back-button:hover {
+    background-color: rgba(239, 67, 67, 0.637);
+}
+
+.No-messages {
+    font-size: 20px;
+    color: white;
+    background-color: transparent;
+    margin-top: 30%;
+
 }

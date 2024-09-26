@@ -1,0 +1,42 @@
+.Searchbar-section {
+    margin: auto;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    margin: 20px;
+}
+
+.search-input {
+    width: 300px;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+    color: white;
+}
+
+.search-input:focus {
+    border-color: rgba(239, 67, 67, 1);
+    outline: none;
+    color: white;
+}
+
+.search-button {
+    padding: 12px 15px;
+    margin-left: 10px;
+    background-color: rgba(239, 67, 67, 1);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.search-button:hover {
+    background-color: rgba(239, 67, 67, 0.633);
+
+    /* Mörkare blå vid hover */
+}
