@@ -1,5 +1,6 @@
 .Searchbar-section {
     margin: auto;
+    margin-top: 80px;
 }
 
 .search-bar {
@@ -9,7 +10,7 @@
 }
 
 .search-input {
-    width: 300px;
+
     padding: 10px;
     border: 2px solid #ccc;
     border-radius: 5px;

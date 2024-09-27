@@ -19,6 +19,7 @@
     background-color: transparent;
 
     width: 90%;
+    max-width: 1000px;
     display: block;
     background-color: white;
 
@@ -26,7 +27,7 @@
 }
 
 .Post-Message-textarea {
-    background-color: transparent;
+    background-color: white;
     border: 0;
     width: 100%;
     padding: 10px;
@@ -45,8 +46,9 @@
     border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 4px;
     margin-bottom: 20px;
-    margin-top: 20%;
+    margin-top: 10%;
     font-size: 20px;
+    color: white;
 }
 
 
@@ -83,11 +85,13 @@
 }
 
 .inputAndBtn {
+
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     cursor: pointer;
+
 }
 
 
@@ -103,9 +107,9 @@
 
 
 .Close-btn {
-    position: fixed;
-    top: 70px;
-    right: 30px;
+    position: absolute;
+    top: -25px;
+    right: -20px;
     background-color: transparent;
     cursor: pointer;
 }
@@ -118,4 +122,8 @@
 
 .Close-icon:hover {
     color: rgba(239, 67, 67, 1);
+}
+
+.test-wrapper {
+    position: relative;
 }

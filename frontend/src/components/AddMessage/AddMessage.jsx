@@ -60,18 +60,20 @@ function AddMessage() {
             <Logotype />
             <section className="Post-Message">
 
-                <div className='Close-btn' onClick={handleClose}>
-                    <FontAwesomeIcon className='Close-icon' icon={faCircleXmark} />
-                </div>
+
 
                 <form onSubmit={handlePostMessage} className="Post-Message-form">
-
-                    <textarea
-                        className="Post-Message-textarea"
-                        placeholder="Djurgården vinner HockeyAllsvenskan i år..."
-                        value={text}
-                        onChange={(e) => setText(e.target.value)}
-                    ></textarea>
+                    <section className='test-wrapper'>
+                        <div className='Close-btn' onClick={handleClose}>
+                            <FontAwesomeIcon className='Close-icon' icon={faCircleXmark} />
+                        </div>
+                        <textarea
+                            className="Post-Message-textarea"
+                            placeholder="Djurgården vinner HockeyAllsvenskan i år..."
+                            value={text}
+                            onChange={(e) => setText(e.target.value)}
+                        ></textarea>
+                    </section>
                     <div className='kant-vector'>
                         <img className='vector' src={vector} alt="kant till bild" />
                     </div>

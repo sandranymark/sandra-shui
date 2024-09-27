@@ -3,9 +3,10 @@ const { sendResponse, sendError } = require('../../responses/responses.js');
 const { v4: uuid } = require('uuid');
 
 
-const now = new Date().toLocaleString('sv-SE', { timeZone: 'Europe/Stockholm' });
+
 
 exports.handler = async (event) => {
+  const now = new Date().toLocaleString('sv-SE', { timeZone: 'Europe/Stockholm' });
   const { username, text } = JSON.parse(event.body);
   const id = uuid().substring(0, 8);
 

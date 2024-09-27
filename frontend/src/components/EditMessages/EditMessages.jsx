@@ -5,7 +5,7 @@ import './EditMessages.css';
 
 
 function EditMessage({ message, onCancel, onUpdate }) {
-    const [updatedText, setUpdatedText] = useState(message.text);  // Hantera den redigerade texten
+    const [updatedText, setUpdatedText] = useState(message.text);
 
     // Funktion för att spara det uppdaterade meddelandet
     const handleSaveMessage = async () => {
