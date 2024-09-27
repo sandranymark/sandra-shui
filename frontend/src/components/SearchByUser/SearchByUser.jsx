@@ -1,23 +1,3 @@
-// import './SearchByUser.css'
-
-// function SearchByUser() {
-
-
-
-//     return (
-//         <>
-//             <div className='Searchbar-section'>
-//                 <form className="search-bar">
-//                     <input type="text" placeholder="Sök efter användarnamn..." className="search-input" />
-//                     <button type="submit" className="search-button">Sök</button>
-//                 </form>
-//             </div>
-//         </>
-//     )
-// }
-
-// export default SearchByUser
-
 import { useState } from 'react';
 import './SearchByUser.css';
 
