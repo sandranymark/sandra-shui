@@ -50,3 +50,5 @@ https://www.figma.com/file/QKiz47a00tMsrPBIHsznR6/Shui---React?type=design&node-
 ## Inlämning
 
 Inlämning sker på Azomo med en länk till ditt Github repo med din kod senast 27/9 23:59. Glöm inte att skicka med URL:en till din webbapplikation som en kommentar till inlämningen i Azomo, alt. i ditt repo.
+
+![image](https://github.com/user-attachments/assets/6c3a3497-bd60-4044-95d0-dfe4983b6897)
