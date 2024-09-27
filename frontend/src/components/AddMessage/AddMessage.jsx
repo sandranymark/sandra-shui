@@ -73,10 +73,11 @@ function AddMessage() {
                             value={text}
                             onChange={(e) => setText(e.target.value)}
                         ></textarea>
+                        <div className='kant-vector'>
+                            <img className='vector' src={vector} alt="kant till bild" />
+                        </div>
                     </section>
-                    <div className='kant-vector'>
-                        <img className='vector' src={vector} alt="kant till bild" />
-                    </div>
+
 
 
                     <div className='inputAndBtn'>

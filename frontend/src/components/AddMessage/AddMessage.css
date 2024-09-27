@@ -17,12 +17,10 @@
 
 .Post-Message-form {
     background-color: transparent;
-
     width: 90%;
     max-width: 1000px;
     display: block;
     background-color: white;
-
     margin-top: 100px;
 }
 
@@ -33,7 +31,7 @@
     padding: 10px;
     height: 55vh;
     font-size: 20px;
-
+    resize: none;
 }
 
 
@@ -103,6 +101,8 @@
 
 }
 
+
+
 /* CLOSE-BTN ICON */
 
 
@@ -126,4 +126,9 @@
 
 .test-wrapper {
     position: relative;
+
+}
+
+.vector {
+    margin-top: -4px;
 }
